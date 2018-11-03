@@ -1,0 +1,1 @@
+docker run --name=weather-spring-api --restart=always -d -p 4000:8080 weather-app/weather-spring-api
