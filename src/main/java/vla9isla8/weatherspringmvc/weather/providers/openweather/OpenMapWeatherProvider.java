@@ -20,7 +20,7 @@ public class OpenMapWeatherProvider extends WeatherProvider {
     @Override
     protected HttpGet getRequest(String city, short days) {
         String uri = apiConfig.getOpenWeatherApiPath()
-            + String.format("?q=%s&cnt=%d&appid=%s", city, days, apiConfig.getOpenWeatherApiKey());
+            + String.format("?q=%s&cnt=%d&appid=%s&units=metric&lang=ru_ru", city, days, apiConfig.getOpenWeatherApiKey());
         return new HttpGet(uri);
     }
 
